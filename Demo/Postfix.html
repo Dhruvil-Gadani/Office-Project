@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+  </head>
+<body>
+<h4>Infix to Postfix Convert</h4>
+<h5>
+    Multiplication
+</h5>
+<p id="output">
+
+</p>
+<h5>
+    Division
+</h5>
+<p id="output1">
+
+</p>
+
+<h5>
+    Addition
+</h5>
+<p id="output2">
+
+</p>
+
+<h5>
+    Subtraction
+</h5>
+<p id="output3">
+
+</p>
+
+<script type="text/javascript">
+  function postFix(expression) {
+    var ex = expression.split(' ');//expression ne split karayu.
+    var operatorStack = [];//variable 
+    var output = [];//variable
+    var i;
+    for (i = 0; i < ex.length; i++)//for loop chalyu
+    {
+        if (isNaN(ex[i]))//if condition
+        {
+            if ((operatorStack[operatorStack.length - 1] == '/' || 
+                 operatorStack[operatorStack.length - 1] == '*' || 
+                 operatorStack[operatorStack.length - 1] == "^") && 
+                 (ex[i] == '+' || ex[i] == "-"))//check for / , * , + , - 
+                {
+                    output.push(operatorStack[operatorStack.length - 1]);//push value
+                    operatorStack.pop();//pop value
+                    operatorStack.push(ex[i]);//after push value
+                } 
+                else if((operatorStack[operatorStack.length - 1] == '^') 
+                     &&(ex[i] == '*') || (ex[i] == '/') || (ex[i] == '-') || (ex[i] == '+')) 
+                {
+                    output.push(operatorStack[operatorStack.length - 1]);
+                    operatorStack.pop();
+                    operatorStack.push(ex[i]);
+                } 
+                else 
+                {
+                    operatorStack.push(ex[i]);
+                }
+        } 
+        else 
+        {
+            output.push(ex[i]);
+        }
+    }
+
+    for (i = operatorStack.length - 1; operatorStack.length >= 1; i--) 
+    {
+        output.push(operatorStack[i]);
+        operatorStack.pop();
+    }
+    return output;
+}
+
+    var result  = postFix("6 * 2");//postfix is funtion name
+    var result1 = postFix("7 / 5 + 3");//postfix is funtion name
+    var result2 = postFix("9 + 3 * 6 - 2");//postfix is funtion name
+    var result3 = postFix("2 - 4 + 8");//postfix is funtion name
+
+    document.getElementById("output").innerHTML = result;//call result
+    document.getElementById("output1").innerHTML = result1;//call result 1
+    document.getElementById("output2").innerHTML = result2;//call result 2
+    document.getElementById("output3").innerHTML = result3;//call result 3 
+</script>
+</body>
+</html>

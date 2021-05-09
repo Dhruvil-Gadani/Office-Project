@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <script src="common.js"></script>
+    <script src="infix.js"></script>
+    <script src="postfixx.js"></script>
+</head>
+<body>
+    <div>
+        <div>
+            <input type="text" value="" id="expression" />
+            <button type="button" id="btnCalc">Calculation</button>
+        </div>
+        <div>
+            Infix to Postfix expression Conversion: 
+            <span id="Postfix"></span>
+        </div>
+        <div>
+            <h3>Result:</h3>
+            <span id="Result"></span>
+        </div>
+    </div>
+<script type="text/javascript">   
+//jquery 
+$(document).ready(function ()
+{
+    $('#btnCalc').click(function ()//btn e id che 
+    {
+        var infix = $('#expression').val(),//expression e id che
+            postfix = Infix.toPostfix(infix);
+            
+        $('#Postfix').text(postfix).parent().fadeIn();//span
+        $('#Result').text(Postfix.calc(postfix));
+    });
+});
+</script>
+</body>
+</html>
