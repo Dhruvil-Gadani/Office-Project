@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		HTML , JS , JQUERY DEMO
+	</title>
+	<script src="js/jquery.js"></script><!-- Jquery Add -->
+	<link href="css/bootstrap.min.css" rel="stylesheet"><!-- Css Add -->
+	<script src="js/bootstrap.bundle.min.js"></script><!-- Bootstrap js add -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+			
+	<div class="container">
+		<div class="row">
+			<!-- 1 -->
+			<span class="border border-dark col-md-1 " id="span1">
+				<p id="p1">color</p>
+			</span>
+			<!-- 2 -->
+			<span class="border border-dark col-md-1">
+				<input type="radio" checked class="form-check-input" name="r1" id="radio1">Male
+				<br>
+				<input type="radio" class="form-check-input" name="r1" id="radio2">Female
+			</span>
+			<!-- 3 -->
+			<span class="border border-dark col-md-4">
+				<button type="button" id="show">Show Select Controler</button>
+				<button type="button" id="hide">Hide Select Controler</button>
+				<br>
+				<label>Select Control:</label>
+				<select id="selected1">
+					<option value="india">india</option>
+					<option value="usa">usa</option>
+					<option value="uk">uk</option>
+				</select>
+				<br>
+			</span>
+			<!-- 4 -->
+			<span class="border border-dark col-md-4">
+				<label>Text Box : </label>
+				<input type="text" name="" id="textbox">
+				
+			</span>
+			<!-- 5 -->
+			<span class="border border-dark col-md-2">
+				<img src="" id="images" class="image-fulid">
+			</span>
+		</div>
+
+		<div class="row">
+			<!-- 6 -->
+			<span class="border border-dark col-md-2">
+				<input type="checkbox" name="c1" value="Hobby">Hobby<br>
+				<input type="checkbox" name="c1" value="Pession">Pession<br>
+				<input type="checkbox" name="c1" value="Professional">Professional<br>
+				<input type="checkbox" name="c1" value="Art">Art
+			</span>
+			<!-- 7 -->
+			<span class="border border-dark col-md-2"><br>
+				<input type="text" name="" id="box">
+			</span>
+			<!-- 8 -->
+			<span class="border border-dark col-md-2">
+				<input type="color" name="Red" id="color1">
+				<input type="color" name="Green" id="color2">
+				<input type="color" name="Bule" id="color3">
+				
+				<input type="text" name="Red" id="textbox1">
+				<input type="text" name="Green" id="textbox2">
+				<input type="text" name="Bule" id="textbox3">
+			</span>	
+			<!-- 9 -->
+			<span class="border border-dark col-md-4" id="span2">
+					<table class="table">
+  						<thead>
+						    <tr>
+						      <th scope="col">Id</th>
+						      <th scope="col">First</th>
+						      <th scope="col">Last</th>
+						      <th scope="col">SurName</th>
+						    </tr>
+						</thead>
+						<tbody>
+    						<tr>
+						      <th>1</th>
+						      <td>Dhruvil</td>
+						      <td>Gadani</td>
+						      <td>Hasmukhbhai</td>
+						  </tr>
+						  <tr>
+						      <th>2</th>
+						      <td>Laxman</td>
+						      <td>Prajapati</td>
+						      <td>Parshotambhai</td>
+						  </tr>
+  						</tbody>
+					</table>
+			</span>
+			<!-- 10 -->
+			<span class="border border-dark col-md-2">
+				<p>10</p>
+			</span>
+		</div>
+
+		<div class="row">
+			<!-- 11 -->
+			<span class="border border-dark col-md-6">
+				<div>
+					<video id="myvideo">
+						<source src="video/video1.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div>
+					<button id="b1" type="button">video</button>
+				</div>
+			</span>
+			<!-- 12 -->
+			<span class="border border-dark col-md-4">
+				<input type="text" name="" id="text1">	
+				<!-- <button type="button" onclick="table()">Click </button> -->
+				<input type="text" name="" id="text2">
+				<div class="row">
+					<span class="border border-bottom-0 border-dark col">
+						<table id="table">
+							<thead>
+												
+							</thead>
+							<tbody>
+								
+							</tbody>
+						</table>
+					</span>
+				</div>
+				
+			</span>
+			<span class="border border-dark col-md-2">
+				<p>13</p>
+			</span>
+		</div>
+		
+		<div class="row">
+			<!-- 14 -->
+			<span class="border border-dark col-md-2">	
+				<div id="div14" style="background:#98bf21;height:100px;width:100px;"></div>
+				<button id="b14">button</button>
+			</span>
+
+			<span class="border border-dark col-md-3">
+				<p>15</p>
+			</span>
+			<span class="border border-dark col-md-3">
+				<p>16</p>
+			</span>
+			<span class="border border-dark col-md-3">
+				<p>17</p>
+			</span>
+			<span class="border border-dark col-md-1">
+				<p>18</p>
+			</span>
+		</div>
+		
+		<div class="row">
+			<span class="border border-dark col-md-3">
+				<p>19</p>
+			</span>
+			<span class="border border-dark col-md-3">
+				<p>20</p>
+			</span>
+			<span class="border border-dark col-md-3">
+				<p>21</p>
+			</span>
+			<span class="border border-dark col-md-3">
+				<p>22</p>
+			</span>
+		</div>
+		<div class="row" style="margin-bottom: 10px">
+			<span class="border border-dark col-md-3">
+				<p>23</p>
+			</span>
+			<span class="border border-dark col-md-3">
+				<p>24</p>
+			</span>
+			<span class="border border-dark col-md-3">
+				<p>25</p>
+			</span>
+			<span class="border border-dark col-md-3">
+				<p>26</p>
+			</span>
+		</div>
+	</div>
+
+
+
+<script>
+/*JavaScript*/
+	var safeColors = ['00','33','66','94','cc','ff'];
+	var rand = function() 
+	{
+    	return Math.floor(Math.random()*6);
+	};
+	var randomColor = function() {
+	    var r = safeColors[rand()];
+	    var g = safeColors[rand()];
+	    var b = safeColors[rand()];
+	    return "#"+r+g+b;
+	};
+
+/*Jquery*/	
+	$(document).ready(function()
+		{
+			$('#span1').click(function()
+				{
+					$('#span1').each(function()
+						{
+							$(this).css("background", randomColor());		
+						});
+				});
+/*3 no*/
+			$('#radio2').click(function()
+			{
+				$('#radio2').css('background-color' ,'pink');
+			});			
+			$('#textbox').keyup(function(){
+				$('#selected1').val($('#textbox').val());
+			});
+
+			$('#selected1').click(function(){
+				$('#textbox').val($('#selected1').val());
+			});
+
+			$('#hide').click(function(){
+				$('#selected1').hide();
+			});
+
+			$('#show').click(function(){
+				$('#selected1').show();
+			});
+/*4*/
+			$('#textbox').on('change', function()//change
+			{
+        		var img_path = 'images/' + $(this).val() + '.jpg';//image path
+        		$('#images').attr( 'src', img_path );//images id per change thase
+			});
+/*5*/
+			$('#selected1').on('change', function()//change
+			{
+	        	var img_path = 'images/' + $(this).val() + '.jpg';//image path
+	        	$('#images').attr( 'src', img_path );//images id per change thase
+			});
+
+/*6 and 7*/
+			var i = $('#box');
+			$('input[type="checkbox"]').change(function(e)//all check box levana che atle input type checkbox kariyu che.
+			{
+				i.val(getdata());//function call thase
+			});
+
+			function getdata()//function create
+			{
+				var i = "";//variable
+				$('input[type="checkbox"]').each(function(ia ,vl)//each loop
+				{
+					if($(this).is(":checked"))//if condition
+					{
+						i = i+ $(this).val() + ",";
+					}
+				});
+				return i;
+			}
+/*8*/
+			$('#color1').click(function(){
+				$("#textbox1").val($('#color1').val());
+			});	
+			$('#color2').click(function(){
+				$("#textbox2").val($('#color2').val());
+			});
+			$('#color3').click(function(){
+				$("#textbox3").val($('#color3').val());
+			});
+			
+/*11*/
+		
+
+		$("#b1").click(function()
+		{
+			var my = $("#myvideo").get(0);	
+			if(my.paused)
+			{
+				my.play();
+			}
+			else
+			{
+				my.pause();
+			}
+		});
+/*12*/
+
+ var arr = document.getElementById('text1');
+ for (var i=0; i < arr.length; i++) {
+  for (var j=0; j < arr[i].length; j++) {
+    console.log(arr[i][j]);
+  }
+}
+
+/*14*/
+		$('#b14').click(function()
+		{
+			var d = $('#div14');
+			d.animate({height: '200px', opacity: '0.5'}, "slow");
+			d.animate({width: '150px', opacity: '0.5'}, "slow");
+			d.animate({height: '100px', opacity: '0.5'}, "slow");
+			d.animate({width: '100px', opacity: '0.5'}, "slow");
+		});
+});
+
+
+
+
+
+</script>
+</body>
+</html>
