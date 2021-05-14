@@ -12,8 +12,8 @@
 </head>
 
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- MENU -->
+<nav class="navbar navbar-expand-lg navbar-light bg-color">
   <div class="container">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,15 +30,12 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
       </ul>
     </div>
   </div>
 </nav>
-			
-	<div class="container">
+<br>			
+<div class="container">
 		<div class="row">
 			<!-- 1 -->
 			<span class="border border-dark col-md-1 " id="span1">
@@ -65,7 +62,7 @@
 			</span>
 			<!-- 4 -->
 			<span class="border border-dark col-md-4">
-				<label>Text Box : </label>
+				<label>Text Box:</label>
 				<input type="text" name="" id="textbox">
 				
 			</span>
@@ -99,34 +96,17 @@
 			</span>	
 			<!-- 9 -->
 			<span class="border border-dark col-md-4" id="span2">
-					<table class="table">
-  						<thead>
-						    <tr>
-						      <th scope="col">Id</th>
-						      <th scope="col">First</th>
-						      <th scope="col">Last</th>
-						      <th scope="col">SurName</th>
-						    </tr>
-						</thead>
-						<tbody>
-    						<tr>
-						      <th>1</th>
-						      <td>Dhruvil</td>
-						      <td>Gadani</td>
-						      <td>Hasmukhbhai</td>
-						  </tr>
-						  <tr>
-						      <th>2</th>
-						      <td>Laxman</td>
-						      <td>Prajapati</td>
-						      <td>Parshotambhai</td>
-						  </tr>
-  						</tbody>
-					</table>
+					<div id="910">
+						<input type="button" id="input1" value="1" name="">
+						<input type="button" id="input2" value="2" name="">
+						<input type="button" id="input3" value="3" name="">
+						<input type="button" id="input4" value="4" name="">
+					</div>
 			</span>
 			<!-- 10 -->
 			<span class="border border-dark col-md-2">
-				<p>10</p>
+				<!-- <p>10</p> -->
+				<input type="text" name="name" id="input10">
 			</span>
 		</div>
 
@@ -144,22 +124,15 @@
 			</span>
 			<!-- 12 -->
 			<span class="border border-dark col-md-4">
-				<input type="text" name="" id="text1">	
-				<!-- <button type="button" onclick="table()">Click </button> -->
-				<input type="text" name="" id="text2">
+				<input type="text"  value="12:-Click Button And Open Prompt Box in insert the value" 
+					readonly="" style="width: 100%">
+				<center>
+					<input type="button" onclick="createTable()" value="Click">
+				</center>
 				<div class="row">
-					<span class="border border-bottom-0 border-dark col">
-						<table id="table">
-							<thead>
-												
-							</thead>
-							<tbody>
-								
-							</tbody>
-						</table>
-					</span>
+					<span class="border border-dark"></span>
+					<table id="mytable"></table>
 				</div>
-				
 			</span>
 			<span class="border border-dark col-md-2">
 				<p>13</p>
@@ -168,26 +141,25 @@
 		
 		<div class="row">
 			<!-- 14 -->
-			<span class="border border-dark col-md-2">	
-				<div id="div14" style="background:#98bf21;height:100px;width:100px;"></div>
+			<span class="border border-dark col-md-5">	
+				<div id="div14"></div>
 				<button id="b14">button</button>
 			</span>
-
 			<span class="border border-dark col-md-3">
 				<p>15</p>
 			</span>
 			<span class="border border-dark col-md-3">
 				<p>16</p>
 			</span>
-			<span class="border border-dark col-md-3">
-				<p>17</p>
-			</span>
 			<span class="border border-dark col-md-1">
-				<p>18</p>
+				<p>17</p>
 			</span>
 		</div>
 		
 		<div class="row">
+			<span class="border border-dark col-md-3">
+				<p>18</p>
+			</span>
 			<span class="border border-dark col-md-3">
 				<p>19</p>
 			</span>
@@ -196,23 +168,6 @@
 			</span>
 			<span class="border border-dark col-md-3">
 				<p>21</p>
-			</span>
-			<span class="border border-dark col-md-3">
-				<p>22</p>
-			</span>
-		</div>
-		<div class="row" style="margin-bottom: 10px">
-			<span class="border border-dark col-md-3">
-				<p>23</p>
-			</span>
-			<span class="border border-dark col-md-3">
-				<p>24</p>
-			</span>
-			<span class="border border-dark col-md-3">
-				<p>25</p>
-			</span>
-			<span class="border border-dark col-md-3">
-				<p>26</p>
 			</span>
 		</div>
 	</div>
@@ -232,6 +187,22 @@
 	    var b = safeColors[rand()];
 	    return "#"+r+g+b;
 	};
+/*12 JAVASCRIPT*/
+	function createTable()
+	{
+		rn = window.prompt("Input no of rows");
+		cn = window.prompt("Input no of columns"); 
+		for(var r=0;r<parseInt(rn,10);r++)
+  		{
+   			var x=document.getElementById('mytable').insertRow(r);
+   			for(var c=0;c<parseInt(cn,10);c++)  
+    		{
+     			var y=  x.insertCell(c);
+     			y.innerHTML=" ["+ r + " " +  c + "] " ; 
+    		}
+   		}
+   		mytable.clear();
+	}
 
 /*Jquery*/	
 	$(document).ready(function()
@@ -277,24 +248,26 @@
 			});
 
 /*6 and 7*/
-			var i = $('#box');
-			$('input[type="checkbox"]').change(function(e)//all check box levana che atle input type checkbox kariyu che.
-			{
-				i.val(getdata());//function call thase
-			});
+		    var s = $('#box');
+  
+ 			$('input[type="checkbox"]').change(function(e)//all check box levana che atle input type checkbox kariyu che.
+ 			{
+     			s.val(getSelected());
+  			});
 
-			function getdata()//function create
-			{
-				var i = "";//variable
-				$('input[type="checkbox"]').each(function(ia ,vl)//each loop
-				{
-					if($(this).is(":checked"))//if condition
-					{
-						i = i+ $(this).val() + ",";
-					}
-				});
-				return i;
-			}
+ 	 		function getSelected()//function create
+ 	 		{
+   				var k = "";
+   				$('input[type="checkbox"]').each(function(i,cb)//each loop
+   				{
+       				if($(this).is(":checked"))//if condition
+       				{
+           				k += $(this).val() + ",";
+       				}
+   				});
+   			return k;
+  			}
+  
 /*8*/
 			$('#color1').click(function(){
 				$("#textbox1").val($('#color1').val());
@@ -305,6 +278,23 @@
 			$('#color3').click(function(){
 				$("#textbox3").val($('#color3').val());
 			});
+
+/*9 and 10*/
+			$('#input1').click(function(){
+				$('#input10').val($('#input1').val());
+			});
+
+			$('#input2').click(function(){
+				$('#input10').val($('#input2').val());
+			});
+			
+			$('#input3').click(function(){
+				$('#input10').val($('#input3').val());
+			});
+
+			$('#input4').click(function(){
+				$('#input10').val($('#input4').val());
+			});	
 			
 /*11*/
 		
@@ -321,14 +311,6 @@
 				my.pause();
 			}
 		});
-/*12*/
-
- var arr = document.getElementById('text1');
- for (var i=0; i < arr.length; i++) {
-  for (var j=0; j < arr[i].length; j++) {
-    console.log(arr[i][j]);
-  }
-}
 
 /*14*/
 		$('#b14').click(function()
