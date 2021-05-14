@@ -1,3 +1,16 @@
+body
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.bg-color
+{
+	background-color: #0080ff;
+}
+.navbar-color
+{
+	color: #ffffffe6;
+}
 select
 {
 	width: 50%;
@@ -38,5 +51,18 @@ img
 	height: auto;
 	margin-top: 5px;
 	margin-bottom: 5px;
+}
+#div14
+{
+	margin-top: 2px;
+	background:#1809ff;
+	height:100px;
+	width:100px;
+	margin-left: 170px;
+	margin-right: 10px;
+}
+#b14
+{
+	margin-left:185px;  
 }
 
