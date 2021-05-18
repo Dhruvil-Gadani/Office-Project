@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="js/jquery.js"></script><!-- Jquery Add -->
+	<link href="css/bootstrap.min.css" rel="stylesheet"><!-- Css Add -->
+	<script src="js/bootstrap.bundle.min.js"></script><!-- Bootstrap js add -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+<!-- Get And Set -->
+		<span class="border border-dark col-3" id="s">
+			<label><b>Get Set Text</b></label><br>
+			<input type="text" name="" id="txt" value="Get Set Text" /><br>
+			<button type="button" onclick="getvalue()">Click Me</button><br>			
+			<input type="text" name="" id="txt1">
+		</span>
+<!-- Get And Set -->
+		<span class="border border-dark col-3" id="s">
+			<label><b>Get Set Number</b></label><br>
+			<input type="text" name="" id="while" value="Get Set Number"><br>
+			<button type="button" onclick="getsetnumber()">Click Me</button><br>			
+			<input type="text" name="" id="while1">
+		</span>
+<!--For Loop -->
+		<span class="border border-dark col-2" id="s">
+			<label><b>For Loop</b></label>
+			<p id="forloop"></p>
+		</span>
+<!--While Loop -->
+		<span class="border border-dark col-2" id="s">
+			<label><b>While Loop</b></label>
+			<p id="demo"></p>
+		</span>
+<!--Do While Loop -->
+		<span class="border border-dark col-2" id="s">
+			<label><b>Do While Loop</b></label>
+			<p id="doloop"></p>
+		</span>
+<!-- Factorial -->
+		<span class="border border-dark col-3" id="s">
+			<label><b>Factorial</b></label><br>
+			<input type="text" name="" id="factnumber" class="fact" value=""><br>
+			<button type="button" onclick="fact();">Factorial</button>
+			<p id="result"></p>
+		</span>
+<!-- Factorial Recursion -->
+		<span class="border border-dark col-3" id="s">
+			<label><b>Factorial Recursion</b></label>
+			<input type="text" name="" id="factnumberrecursion" class="fact" value=""><br>
+			<button type="button" onclick="factrecursion()">Factorial</button>
+			<p id="result1"></p>
+		</span>
+<!-- Reverse Digit -->
+		<span class="border border-dark col-3" id="s">
+			<label><b>Reverse Digit</b></label><br>	
+			<input type="text" name="" id="reversedigit" value=""><br>
+			<button type="button" onclick="rd()">Click</button>
+			<p id="digitreverse"></p>
+		</span>
+<!-- Switch Case -->
+		<span class="border border-dark col-3" id="s">
+			<label><b>Switch Case</b></label>
+			<p>Enter 1 to 7 Number</p>	
+			<input type="text" name="" id="sc" value=""><br>
+			<button type="button" onclick="switchcase();">Click</button>
+			<p id="cs"></p>
+		</span>
+<!-- Array -->
+		<span class="border border-dark col-3" id="s">
+			<label><b>Array</b></label><br>
+			<input type="text" name="" id="arr" value=""><br>
+			<button type="button" onclick="array()">Click Me</button><br>
+		</span>
+		<span class="border border-dark col-3" id="s">
+			<label><b>Array Answer</b></label>
+			<p id="arra"></p>
+		</span>
+		
+<!-- Ternary Operator -->
+		<span class="border border-dark col-3" id="s">
+			<label><b>Ternary Operator</b></label>
+			<input type="text" name="" id="ternary"><br>
+			<button type="button" onclick="ternaryoperator();">Click Me</button><br>
+		</span>
+		<span class="border border-dark col-3" id="s">
+			<label><b>Ternary Answer</b></label>
+			<p id="operator"></p>
+		</span>
+<!-- Array Sorting -->
+		<span class="border border-dark col-3" id="s">
+			<label><b>Array Sorting</b></label>
+			<p id="sortarray"></p>
+		</span>
+<!-- Stack -->
+		<span class="border border-dark col-3" id="s"> 
+			<label><b>Stack</b></label>
+			<input type="text" name="" id="stacktext"><br>
+			<button type="button" id="pushbtn">Push</button>
+			<button type="button" id="popbtn">Pop</button>
+			<button type="button" id="ppdisplaybtn">Display</button>
+			<p id="stackresult"></p>
+		</span>
+<!-- Queue -->
+		<span class="border border-dark col-3" id="s"> 
+			<label><b>Queue</b></label>
+			<input type="text" name="" id="queuetext"><br>
+			<button type="button" id="enqueuebtn">Enqueue</button>
+			<button type="button" id="dequeuebtn">Dequeue</button>
+			<button type="button" id="eddisplaybtn">Display</button>
+			<p id="queueresult"></p>
+		</span>		
+	</div>
+</div>
+<!---------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------->
+<script>
+/*Get Set Value*/
+		document.getElementById("txt").value = "Text Here";
+		function getvalue()
+		{
+			var txt = document.getElementById("txt").value;//get value
+			document.getElementById("txt1").value = txt;//set value
+			//alert(txt);//alert Message	
+		}
+/*-----------------------------------------------------------------------------------------------*/
+/*For Loop*/
+		var fr = ""; 
+		for(var i =0; i<= 5 ; i++)
+		{
+			fr  +="Number is " + i + "<br>";
+			//console.log(i);
+			//alert(fr);
+		}
+		document.getElementById("forloop").innerHTML = fr;
+/*-----------------------------------------------------------------------------------------------*/
+/*Get Set Nubmer*/
+		document.getElementById("while").value = "Enter Number";
+		function getsetnumber()
+		{
+			var wh = document.getElementById("while").value;
+			document.getElementById("while1").value = wh;
+		}
+/*-----------------------------------------------------------------------------------------------*/
+/*While Loop*/
+		var tx = ""; 
+		var i = 0 ;
+		while(i<= 5)
+		{
+			tx  +="Number is " + i + "<br>";
+			//console.log(i);
+			i++
+		}
+		document.getElementById("demo").innerHTML = tx;
+/*-----------------------------------------------------------------------------------------------*/
+/*Do While Loop*/
+		var d = ""; 
+		var i = 0 ;
+		do
+		{
+			d  +="Number is " + i + "<br>";
+			i++;
+		}
+		while(i<=5);
+		document.getElementById("doloop").innerHTML = d;
+/*-----------------------------------------------------------------------------------------------*/
+/*Factorial*/
+		function fact()
+		{
+			var fact = 1, num;
+			num = document.getElementById("factnumber").value;
+			for(var i=1 ; i<=num ; i++)
+			{
+				fact = fact * i; //fact = 5 * i // 5 * 1 = 5 
+			}
+			i = i - 1; //i value increment i = 2 -- i = 2-1
+			document.getElementById("result").innerHTML = "The Factorial Number "+  i  + " Is :" + fact ;	
+		}
+/*-----------------------------------------------------------------------------------------------*/
+/*Factorial Recursion*/
+		function factrecursion()
+		{
+			var number = document.getElementById("factnumberrecursion").value; /*it is id pass*/
+			var fn = fac(number);//Function Create 
+			document.getElementById("result1"/*it is id call*/).innerHTML = "The Factorial Of Recursion Number " + number + " is: "+fn; 
+		}
+		function fac(number)//Function Call
+		{
+			if(number == 0)//check Factnum is 0 or not 
+			{
+				return 1;//factNum is 0 then retrun 1
+			}
+			else
+			{
+				return number * fac(number - 1);//suppose 5 * fact(5-1)
+			}
+		}
+/*-----------------------------------------------------------------------------------------------*/
+/*Reverse Digit*/
+		function rd()
+		{
+			var a,no,reverse=0;
+			no =document.getElementById("reversedigit").value;
+			while(no > 0)
+			{
+				a = no % 10;
+				no =parseInt(no / 10);
+				reverse = reverse * 10 + a ; 
+			}
+			document.getElementById("digitreverse").innerHTML = "Reverse Digit Number " + reverse ;
+		}
+/*-----------------------------------------------------------------------------------------------*/
+/*Switch Case*/
+		function switchcase()
+		{
+			var day = parseInt(document.getElementById("sc").value);//Convert int 
+			switch(day)//case 1 to 7
+			{
+				case 1:
+					day = "Sunday";
+				break;
+				case 2:
+					day = "Monday";
+				break;
+				case 3:
+					day	= "Tuesday";
+				break;
+				case 4:
+					day = "Wednesday";
+				break;
+				case 5:
+					day = "Thursday";
+				break;
+				case 6:
+					day = "Friday";
+				break;
+				case 7:
+					day = "Saturday";
+				break;
+				default:
+					day = "Please Enter Valid Number";
+			}
+			document.getElementById("cs").innerHTML = day;
+		}
+/*-----------------------------------------------------------------------------------------------*/		
+/*Array*/
+		function array()
+		{
+			var sum = "";
+			var myarray = document.getElementById("arr").value;
+			for(var i = 0 ; i< myarray.length ; i++)
+			{
+				sum += myarray[i];
+			}
+			document.getElementById("arra").innerHTML = "Array Element of  "+ " ["+ sum + "] "; 
+		}
+/*-----------------------------------------------------------------------------------------------*/
+/*Array Sorting*/
+		function arraysorting()
+		{	
+			var myarray = ["Dhruvil" , "Amal" , "Mayur" , "Krunal" , "Laxman"];
+			document.getElementById("sortarray").innerHTML = myarray.sort();
+			//document.getElementById("sortarray").innerHTML = myarray;
+		}
+		arraysorting(); 
+/*-----------------------------------------------------------------------------------------------*/		
+/*Ternary Operator*/
+		function ternaryoperator()
+		{
+			var hour = new Date().getHours();
+			var g ; 
+			hour = document.getElementById("ternary").value;
+			g = (hour < 18 ) ? "Good Afternoon" : "Good Evening" ;
+			document.getElementById("operator").innerHTML = g;
+		}
+/*-----------------------------------------------------------------------------------------------*/
+/*Stack */
+		var pushBtnEle = document.getElementById("pushbtn");
+		var popBtnEle = document.getElementById("popbtn");
+		var displayBtnEle = document.getElementById("ppdisplaybtn");
+		var stackresultEle = document.getElementById("stackresult");
+		
+		class Stack // class create 
+		{
+			constructor()// constructor
+			{
+				this.items = [];
+				this.top = 0;
+			}
+		}
+		Stack.prototype.push = function(ele)//push part
+		{
+			this.items[this.top] = ele;
+			this.top += 1; 
+		};
+
+		Stack.prototype.pop = function()//Pop Part
+		{
+			if(this.top === 0)
+			{
+				return "No More Element Was Delete";
+			}
+			tempNum = this.items[this.top - 1];//tempNum = (this.items(1,2, 4)) [this.top-1](4-1];
+			this.items.length -= 1;
+			return tempNum; 
+		};
+
+		Stack.prototype.display = function()//Display Part
+		{
+			if(this.top == 0)//If Check top == 0 
+			{
+				return " Stack is Empty";
+			}
+			for(var i = 0 ; i < this.top ; i++)//for loop 
+			{
+				stackresultEle.innerHTML += this.items[i] + " , ";
+			}
+		};
+
+		var stack = new Stack();//Class Stack Value store in var stack
+		displayBtnEle.addEventListener("click" , function()
+		{
+			stackresultEle.innerHTML = "Stack Element :" ;
+			stack.display();//call display funtion 
+		});
+
+		pushBtnEle.addEventListener("click" , function()
+		{
+			var element = document.getElementById("stacktext").value;
+			stackresultEle.innerHTML = element + " Is Pushed to Stack";
+			stack.push(element);//call push function of element 
+		});
+		popBtnEle.addEventListener("click" , function()
+		{
+			stackresultEle.innerHTML = stack.pop() + " is Popped From the Stack";
+		});
+
+/*-----------------------------------------------------------------------------------------------*/
+/*Queue*/
+		var enqueuebtnEle = document.getElementById("enqueuebtn");
+		var dequeuebtnEle = document.getElementById("dequeuebtn");
+		var displayBtnEle = document.getElementById("eddisplaybtn");
+		var queueresultEle = document.getElementById("queueresult");
+
+		class Queue
+		{
+			constructor()
+			{
+				this.items = [];
+				this.top = 0 ;
+			}
+		}
+
+		Queue.prototype.enqueue = function(ele)
+		{
+			this.items[this.top] = ele ;
+			this.top = this.top + 1;
+		};
+
+		Queue.prototype.dequeue = function()
+		{
+			if (this.top === 0)
+			{
+				return " No More Element To Remove";
+			}
+			tempNum = this.items[0];
+			this.top = this.top - 1;
+			return tempNum; 
+		};
+
+		Queue.prototype.display = function()
+		{
+			if(this.top == 0)
+			{
+				return " Stack is Empty";
+			}
+			for(var i = 0 ; i < this.top ; i++)
+			{
+				queueresultEle.innerHTML += this.items[i] + ",";
+			}
+		};
+
+		var queue = new Queue();
+		displayBtnEle.addEventListener("click", function() 
+		{
+      		queueresultEle.innerHTML = "Queue Element :";
+      		queue.display();
+   		});
+
+		enqueuebtnEle.addEventListener("click" , function()
+		{
+			var element = document.getElementById("queuetext").value;
+			queueresultEle.innerHTML = element + " Is Added to Queue";
+			queue.enqueue(element);
+		});
+
+		dequeuebtnEle.addEventListener("click" , function()
+		{
+			queueresultEle.innerHTML = queue.dequeue() + " Is Removed From the First Of Queue";
+		});
+</script>
+</body>
+</html>
