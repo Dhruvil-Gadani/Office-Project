@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>
+		Infix To PostFix
+	</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script src="Js/jquery.js"></script>
+	<script src="Js/bootstrap.bundle.min.js"></script>
+	<script src="Js/common.js"></script>
+    <script src="Js/infix.js"></script>
+    <script src="Js/postfix.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="container mt-5">
+	<h2>Infix to Postfix</h2>
+		<div class="row">
+			<div class="col-12">
+	            <input type="text" value="2*5+3" id="expression" />
+    	    </div>
+    	    <div class="col-12 mt-3 mb-3" >
+    	        <button type="button" id="btnCalc">Calculate</button>
+    	    </div>
+    	   <div class="hide">
+            	<h6>Postfix expression:</h6> 
+            	<span id="spanPostfix"></span>
+        	</div>
+		</div>
+</div>
+
+<script>	
+$(document).ready(function()
+{
+    $('#btnCalc').click(function () {
+        var infix = $('#expression').val(),
+            postfix = Infix.toPostfix(infix);
+            
+        $('#spanPostfix').text(postfix).parent().fadeIn();
+    });
+});
+</script>
+</body>
+</html>
